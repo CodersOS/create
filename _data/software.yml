@@ -1,18 +1,44 @@
-# HTML is supported.
-# Markdown is supported
+# HTML is supported in descriptions
+# Markdown is supported in descriptions
 
 - name: Grafical User Interface
+  description: This is the grafical user interface. Without one of these the system boots into the command line. It is usually enough to install one of these.
   software:
+  # examples see
+  # http://askubuntu.com/questions/2093/how-to-install-gui-desktop-on-a-server#2096
+  - name: Ubuntu
+    id: ubuntu-desktop
+    packages: ubuntu-desktop
+    disk: xxxMB
+  - name: Kubuntu
+    id: kubuntu-desktop
+    packages: kubuntu-desktop
+    disk: xxxMB
+  - name: Gnome
+    id: gnome-desktop
+    packages: ubuntu-gnome-desktop
+    disk: xxxMB
+  - name: Xubuntu
+    id: xubuntu-desktop
+    packages: xubuntu-desktop
+    disk: xxxMB
+  - name: Lubuntu
+    id: lubuntu-desktop
+    packages: lubuntu-desktop
+    disk: xxxMB
+  - name: Edubuntu
+    id: edubuntu-desktop
+    packages: edubuntu-desktop
+    disk: xxxMB
+  # other desktops
+  - name: Mate
+    id: mate
+    packages: mate-desktop-environment-core
+    disk: xxxMB
   - name: Busybox
     id: busybox
     disk: xxMB
     packages: busybox
-  - name: Gnome
-    id: gnome
-    disk: xxxMB
-  - name: Xubuntu
-    id: xubuntu
-    disk: xxxMB
 
 - name: App Inventor
   software:
@@ -20,18 +46,22 @@
     id: aistarter
     description: "The App Inventor Starter Software executes the App Inventor Companion on the computer so that no additional Android device is required."
 #      de: "Die App Inventor Starter Software führt App Inventor Companion auf dem Computer aus, sodass kein mobiles Gerät benötigt wird."
-    command: aistarter.sh
+    script: aistarter.sh
 
 - name: Web Browser
   description: You may need Browsers to access the Internet.
   software:
   - name: Firefox
     id: firefox
+    packages: firefox
   - name: Chromium
     id: chromium
+    packages: 
   - name: Google Chrome
     id: chrome
+    packages: 
   - name: Opera
     id: opera
+    packages: 
     
   
