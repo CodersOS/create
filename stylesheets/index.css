@@ -1,0 +1,91 @@
+@import url("Ubuntu.css");
+@import url("grid.css");
+
+.heading {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 2em;
+  
+}
+
+.header {
+  margin: 0em;
+  padding: 0em;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+  background-color: gray;
+}
+
+.categories {
+  padding-top: 1em;
+}
+
+.header .heading {
+  font-size: 3em;
+  margin: 0.4em;
+}
+
+.category {
+  margin-bottom: 1em;
+}
+
+.category .heading {
+  margin: 0.5em;
+  margin-bottom: 0.1em;
+}
+
+.category .description div {
+  min-width: 0em;
+  display: block;
+  min-height: 0.01em;
+}
+
+.category .desciption .inner {
+}
+
+.software .heading {
+  margin: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.software {
+}
+
+.software .inner {
+  margin: 0.3em;
+  padding: 0.3em;
+}
+
+.software-list .toinstall .inner {
+  background-color: #eeffdd;
+}
+
+.rounded {
+  border-bottom-left-radius: 0.3em 0.3em;
+  border-bottom-right-radius: 0.3em 0.3em;
+  border-top-left-radius: 0.3em 0.3em;
+  border-top-right-radius: 0.3em 0.3em;
+}
+
+.software .install {
+  background-color: #eeffdd;
+  text-align: center;
+  width: 70%;
+  display: block;
+  margin-top: 0.5em;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+.software .description {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.software .install a {
+  text-decoration: none;
+  color: black;
+}

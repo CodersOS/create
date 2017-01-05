@@ -1,0 +1,52 @@
+---
+---
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css" media="screen">
+    <script type="text/javascript" async="" 
+            src="javascript/configuration.js"></script>
+    <script type="text/javascript" async="" 
+            src="javascript/install.js"></script>
+    <script type="text/javascript" async="" 
+            src="javascript/software-list.js"></script>
+    <meta http-equiv="ref resh" content="1">
+  </head>
+  <body>
+    <div class="header">
+      <div class="heading">Create A Coders'&nbsp;OS Image</div>
+    </div>
+    <div class="categories">
+      {% for software_category in site.data.software %}
+        <div class="category">
+          <div class="heading">{{ software_category.name }}</div>
+          <div class="description grid-whole padded equalize">
+            <div class="grid-third m-grid-quarter"> </div>
+            <div class="grid-third m-grid-half s-grid-whole">{{ software_category.description }}</div>
+            <div class="grid-third m-grid-quarter"> </div>
+          </div>
+          <div class="software-list grid-whole padded equalize">
+            {% for software in software_category.software %}
+              <div class="software grid-third m-grid-half s-grid-whole padded"
+                   id="{{ software.id | escape }}">
+                <div class="inner rounded">
+                  <div class="heading">{{ software.name }}</div>
+                  <div class="description">{{ software.description }}</div>
+                  <div class="install">
+                    <a href="javascript:toggle_install({{ software | jsonify | escape }})">
+                      <div class="install-inner rounded"
+                           id="install-{{ software.id | escape }}">
+                        Click to Install
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

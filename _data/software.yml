@@ -1,0 +1,37 @@
+# HTML is supported.
+# Markdown is supported
+
+- name: Grafical User Interface
+  software:
+  - name: Busybox
+    id: busybox
+    disk: xxMB
+    packages: busybox
+  - name: Gnome
+    id: gnome
+    disk: xxxMB
+  - name: Xubuntu
+    id: xubuntu
+    disk: xxxMB
+
+- name: App Inventor
+  software:
+  - name: App Inventor Starter
+    id: aistarter
+    description: "The App Inventor Starter Software executes the App Inventor Companion on the computer so that no additional Android device is required."
+#      de: "Die App Inventor Starter Software führt App Inventor Companion auf dem Computer aus, sodass kein mobiles Gerät benötigt wird."
+    command: aistarter.sh
+
+- name: Web Browser
+  description: You may need Browsers to access the Internet.
+  software:
+  - name: Firefox
+    id: firefox
+  - name: Chromium
+    id: chromium
+  - name: Google Chrome
+    id: chrome
+  - name: Opera
+    id: opera
+    
+  
