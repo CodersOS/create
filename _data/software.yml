@@ -62,6 +62,6 @@
     packages: 
   - name: Opera
     id: opera
-    packages: 
+    command: opera.sh
     
   
