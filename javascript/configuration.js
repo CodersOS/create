@@ -11,6 +11,7 @@ function toggle_install(spec) {
   } else {
     install(spec);
   }
+  console.log("toogle_install: build specification: " + JSON.stringify(get_build_specification()));
 }
 
 function uninstall(spec) {

@@ -8,37 +8,45 @@
   # http://askubuntu.com/questions/2093/how-to-install-gui-desktop-on-a-server#2096
   - name: Ubuntu
     id: ubuntu-desktop
-    packages: ubuntu-desktop
+    packages:
+    - ubuntu-desktop
     disk: xxxMB
   - name: Kubuntu
     id: kubuntu-desktop
-    packages: kubuntu-desktop
+    packages:
+    - kubuntu-desktop
     disk: xxxMB
   - name: Gnome
     id: gnome-desktop
-    packages: ubuntu-gnome-desktop
+    packages:
+    - ubuntu-gnome-desktop
     disk: xxxMB
   - name: Xubuntu
     id: xubuntu-desktop
-    packages: xubuntu-desktop
+    packages:
+    - xubuntu-desktop
     disk: xxxMB
   - name: Lubuntu
     id: lubuntu-desktop
-    packages: lubuntu-desktop
+    packages:
+    - lubuntu-desktop
     disk: xxxMB
   - name: Edubuntu
     id: edubuntu-desktop
-    packages: edubuntu-desktop
+    packages:
+    - edubuntu-desktop
     disk: xxxMB
   # other desktops
   - name: Mate
     id: mate
-    packages: mate-desktop-environment-core
+    packages:
+    - mate-desktop-environment-core
     disk: xxxMB
   - name: Busybox
     id: busybox
     disk: xxMB
-    packages: busybox
+    packages:
+    - busybox
 
 - name: App Inventor
   software:
@@ -53,7 +61,8 @@
   software:
   - name: Firefox
     id: firefox
-    packages: firefox
+    packages:
+    - firefox
   - name: Chromium
     id: chromium
     packages: 

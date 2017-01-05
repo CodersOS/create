@@ -1,5 +1,6 @@
 @import url("Ubuntu.css");
 @import url("grid.css");
+@import url("common.css");
 
 .heading {
   text-align: center;
@@ -9,13 +10,6 @@
   
 }
 
-.header {
-  margin: 0em;
-  padding: 0em;
-  padding-bottom: 0.2em;
-  padding-top: 0.2em;
-  background-color: gray;
-}
 
 .categories {
   padding-top: 1em;

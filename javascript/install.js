@@ -13,7 +13,7 @@ function build_specification(build_server) {
   spec.redirect = get_redirect_url(build_server);
   spec.commands = [];
   var installs = software_spec_to_install();
-  for (var i; i < installs.length; i += 1) {
+  for (var i = 0; i < installs.length; i += 1) {
     var software_spec = installs[i];
     var build_spec = get_build_command(software_spec);
     spec.commands.push(build_spec);
@@ -23,18 +23,30 @@ function build_specification(build_server) {
 
 function get_build_command(software) {
   var command = {};
+  command.arguments = []; // TODO: Read parameters from options
   command.name = software.id;
-  if (spec.script) {
-    command.command = get_command_from_file_name(spec.script);
-    if (spec.command) {
+  if (software.packages) {
+    if (software.command || software.script) {
+      alert("You can not specify command and script and packages in " + software.id + ".");
+    }
+    command.command = get_command_from_file_name("apt-get-install.sh");
+    // check if we have a string from http://stackoverflow.com/a/4775737/1320237
+    if( Object.prototype.toString.call( software.packages ) === '[object Array]' ) {
+      command.arguments = software.packages
+    } else {
+      command.arguments = ["invalid-package"];
+      alert("The packages of " + software.id + " should be given as an array. Please fix this!");
+    }
+  } else if (software.script) {
+    command.command = get_command_from_file_name(software.script);
+    if (software.command) {
       alert("You can not specify command and script in " + software.id + ".");
     }
-  } else if (spec.command) {
-    command.command = spec.command;
+  } else if (software.command) {
+    command.command = software.command;
   } else {
-    command = get_null_command();
+    command.command = get_null_command();
   }
-  command.arguments = []; // TODO: Read parameters from options
   return command;
 }
 
@@ -42,4 +54,9 @@ function install_everything() {
   var build_server = choose_build_server();
   var specification = build_specification(build_server);
   build(build_server, specification);
+}
+
+function get_build_specification() {
+  var build_server = choose_build_server();
+  return build_specification(build_server);
 }
