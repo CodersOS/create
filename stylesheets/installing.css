@@ -1,0 +1,37 @@
+@import url("Ubuntu.css");
+@import url("grid.css");
+@import url("common.css");
+
+.command {
+  
+}
+
+.command .name {
+  
+}
+
+.command .output {
+  
+}
+
+.command .exitcode {
+  
+}
+
+.status-running {
+  
+}
+
+.status-waiting {
+  
+}
+
+.status-success {
+  
+}
+
+.status-failure {
+  
+}
+
+
