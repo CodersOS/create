@@ -1,15 +1,16 @@
 
-function get_redirect_url() {
+function get_redirect_url(build_server) {
   var path = document.location.pathname;
   var end_of_directory = path.lastIndexOf("/");
   var directory_path = path.slice(0, end_of_directory + 1);
-  return document.location.origin + directory_path + "installing.html";
+  var query = "?build_server=" + encodeURIComponent(build_server.url);
+  return document.location.origin + directory_path + "installing.html" + query;
 }
 
-function build_specification() {
+function build_specification(build_server) {
   // see https://github.com/CodersOS/image-creator-server/blob/master/docs/README.md
   var spec = {};
-  spec.redirect = get_redirect_url();
+  spec.redirect = get_redirect_url(build_server);
   spec.commands = [];
   var installs = software_spec_to_install();
   for (var i; i < installs.length; i += 1) {
@@ -38,5 +39,7 @@ function get_build_command(software) {
 }
 
 function install_everything() {
-  
+  var build_server = choose_build_server();
+  var specification = build_specification(build_server);
+  build(build_server, specification);
 }

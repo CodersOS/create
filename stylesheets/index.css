@@ -89,3 +89,7 @@
   text-decoration: none;
   color: black;
 }
+
+.invisible {
+  display: none;
+}

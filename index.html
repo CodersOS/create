@@ -13,6 +13,8 @@
             src="javascript/software-list.js"></script>
     <script type="text/javascript" async="" 
             src="javascript/commands.js"></script>
+    <script type="text/javascript" async="" 
+            src="javascript/build-servers.js"></script>
     <meta http-equiv="ref resh" content="1">
   </head>
   <body>
@@ -49,6 +51,18 @@
           </div>
         </div>
       {% endfor %}
+    </div>
+    <div class="installation">
+      <form class="invisible" id="build-form" action=""
+            method="post">
+        <input type="hidden" name="specification"
+               id="build-form-specification">
+      </form>
+      <a href="javascript:install_everything()">
+        <div class="install-button">
+          INSTALL NOW
+        </div>
+      </a>
     </div>
   </body>
 </html>
