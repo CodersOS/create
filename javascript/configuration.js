@@ -1,4 +1,6 @@
+var install_before = [];
 var to_install = [];
+var install_after = ["iso-build"];
 
 function toggle_install(spec) {
   if (spec.id == null) {
@@ -28,8 +30,9 @@ function install(spec) {
 
 function software_spec_to_install() {
   var specifications = [];
-  for (var i = 0; i < to_install.length; i += 1) {
-    var id = to_install[i];
+  var to_install_2 = install_before.concat(to_install).concat(install_after);
+  for (var i = 0; i < to_install_2.length; i += 1) {
+    var id = to_install_2[i];
     var spec = get_software_spec(id);
     specifications.push(spec);
   }
