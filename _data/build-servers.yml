@@ -5,6 +5,5 @@
 #   https://github.com/CodersOS/image-creator-server/blob/master/docs/README.md
 # We use the /status to find if they are working.
 
-- name: "Nicco's VM"
-  url: http://192.168.71.162/test
-
+- name: "build.CodersOS.quelltext.eu"
+  url: https://build.codersos.quelltext.eu
