@@ -33,9 +33,9 @@ function update_progress(progress) {
   var download_link = document.getElementById("download-link");
   var progress_div = document.getElementById("progress");
   if (progress.status == "stopped") {
-    if (progress.url) {
+    if (progress.download) {
       download_button.textContent = "CLICK TO DOWNLOAD";
-      download_link.href = progress.url;
+      download_link.href = build_server + progress.download;
     } else {
       download_button.textContent = "ERROR: iso creation failed";
     }
