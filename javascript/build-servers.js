@@ -23,6 +23,7 @@ function test_and_add_server(server) {
         var server_copy = JSON.parse(JSON.stringify(server));
         server_copy.priority = response.priority;
         ready_build_servers.push(server_copy);
+        console.log("build-servers.js: test_and_add_server: added build server: " + JSON.stringify(server_copy));
       }
     }
   };
