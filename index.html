@@ -23,6 +23,9 @@
     </div>
     <div class="categories">
       {% for software_category in site.data.software %}
+        {% if software_category.name == "hidden" %}
+          {% continue %}
+        {% endif %}
         <div class="category">
           <div class="heading">{{ software_category.name }}</div>
           <div class="description grid-whole padded equalize">

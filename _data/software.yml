@@ -72,5 +72,10 @@
   - name: Opera
     id: opera
     command: opera.sh
-    
-  
+
+- name: hidden
+  desciption: This will be executed either way.
+  software:
+  - name: Build ISO Image
+    id: iso-build
+    command: "#!/bin/bash\n/toiso/command.sh -q\n"
