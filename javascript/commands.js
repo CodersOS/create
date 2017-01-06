@@ -2,7 +2,7 @@
 ---
 
 function get_null_command() {
-  return "#!/bin/bash\necho 'Nothing to do.'\n"
+  return "#!/bin/bash\necho 'Seems like the implementation of the install command was not found.'\nexit 1\n"
 }
 
 function command_not_found(name) {
