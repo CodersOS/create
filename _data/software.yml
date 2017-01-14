@@ -48,7 +48,7 @@
     packages:
     - busybox
 
-- name: App Inventor
+- name: Programming
   software:
   - name: App Inventor Starter
     id: aistarter
@@ -56,6 +56,11 @@
 #      de: "Die App Inventor Starter Software führt App Inventor Companion auf dem Computer aus, sodass kein mobiles Gerät benötigt wird."
     script: aistarter.sh
 
+  - name: Arduino
+    id: arduino
+    description: "The Arduino development environment."
+    script: arduino.sh
+    
 - name: Web Browser
   description: You may need Browsers to access the Internet.
   software:
