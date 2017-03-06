@@ -1,8 +1,8 @@
 # HTML is supported in descriptions
 # Markdown is supported in descriptions
 
-- name: Grafical User Interface
-  description: This is the grafical user interface. Without one of these the system boots into the command line. It is usually enough to install one of these.
+- name: Graphical User Interface
+  description: This is the graphical user interface. Without one of these the system boots into the command line. It is usually enough to install one of these.
   software:
   # examples see
   # http://askubuntu.com/questions/2093/how-to-install-gui-desktop-on-a-server#2096

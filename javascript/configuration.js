@@ -18,13 +18,11 @@ function toggle_install(spec) {
 
 function uninstall(spec) {
   spec.list_entry.classList.remove("toinstall");
-  spec.install_button.textContent = "Click to Install.";
   to_install.pop(spec.id);
 }
 
 function install(spec) {
   spec.list_entry.classList.add("toinstall");
-  spec.install_button.textContent = "Will be installed.";
   to_install.push(spec.id);
 }
 

@@ -1,71 +1,77 @@
 ---
 ---
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/index.css" media="screen">
-    <script type="text/javascript" async="" 
-            src="javascript/configuration.js"></script>
-    <script type="text/javascript" async="" 
-            src="javascript/install.js"></script>
-    <script type="text/javascript" async="" 
-            src="javascript/software-list.js"></script>
-    <script type="text/javascript" async="" 
-            src="javascript/commands.js"></script>
-    <script type="text/javascript" async="" 
-            src="javascript/build-servers.js"></script>
-    <meta http-equiv="ref resh" content="1">
-  </head>
-  <body>
-    <div class="header">
-      <div class="heading">Create A Coders'&nbsp;OS Image</div>
+    <title>Coders' OS Image</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <script src="javascript/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" async="" src="javascript/configuration.js"></script>
+    <script type="text/javascript" async="" src="javascript/install.js"></script>
+    <script type="text/javascript" async="" src="javascript/software-list.js"></script>
+    <script type="text/javascript" async="" src="javascript/commands.js"></script>
+    <script type="text/javascript" async="" src="javascript/build-servers.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="jumbotron">
+            <div class="text-center"><h2>Create a Coders' OS Image</h2></div>
+        </div>
     </div>
-    <div class="categories">
-      {% for software_category in site.data.software %}
-        {% if software_category.name == "hidden" %}
-          {% continue %}
-        {% endif %}
-        <div class="category">
-          <div class="heading">{{ software_category.name }}</div>
-          <div class="description grid-whole padded equalize">
-            <div class="grid-third m-grid-quarter"> </div>
-            <div class="grid-third m-grid-half s-grid-whole">{{ software_category.description }}</div>
-            <div class="grid-third m-grid-quarter"> </div>
-          </div>
-          <div class="software-list grid-whole padded equalize">
-            {% for software in software_category.software %}
-              <div class="software grid-third m-grid-half s-grid-whole padded"
-                   id="{{ software.id | escape }}">
-                <div class="inner rounded">
-                  <div class="heading">{{ software.name }}</div>
-                  <div class="description">{{ software.description }}</div>
-                  <div class="install">
-                    <a href="javascript:toggle_install({{ software | jsonify | escape }})">
-                      <div class="install-inner rounded"
-                           id="install-{{ software.id | escape }}">
-                        Click to Install
-                      </div>
+</div>
+<div class="container">
+    {% for software_category in site.data.software %} {% if software_category.name == "hidden" %} {% continue %} {%
+    endif %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-xs-12">
+            <div class="row">
+                <div class="col-xs-12"><h3 class="text-center">{{ software_category.name }}</h3></div>
+            </div>
+            <div class="row">
+                <span class="col-xs-8 col-xs-offset-2 text-center">
+                    {{ software_category.description }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        {% for software in software_category.software %}
+        <div class="col-xs-6 col-md-4 col-lg-3">
+            <div id="{{ software.id | escape}}">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="text-center">{{ software.name }}</div>
+                    </div>
+                    {% if software.description %}
+                    <div class="panel-body">{{ software.description }}</div>
+                    {% endif %}
+                    <a class="installation_anchor" href="javascript:toggle_install({{ software | jsonify | escape }})">
+                        <div class="panel-footer" id="install-{{ software.id | escape}}">
+                            <div class="text-center will-be-installed">Add to installation</div>
+                        </div>
                     </a>
-                  </div>
                 </div>
-              </div>
-            {% endfor %}
-          </div>
+            </div>
         </div>
-      {% endfor %}
+        {% endfor %}
     </div>
+    {% endfor %}
     <div class="installation">
-      <form class="invisible" id="build-form" action=""
-            method="post">
-        <input type="hidden" name="specification"
-               id="build-form-specification">
-      </form>
-      <a href="javascript:install_everything()">
-        <div class="install-button">
-          INSTALL NOW
+        <form class="invisible" id="build-form" action="" method="post">
+            <input type="hidden" name="specification" id="build-form-specification">
+        </form>
+        <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <a href="javascript:install_everything()" class="btn btn-success btn-block">Install</a>
+            </div>
         </div>
-      </a>
     </div>
-  </body>
+</div>
+<br>
+<script src="javascript/index.js"></script>
+</body>
 </html>
