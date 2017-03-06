@@ -1,10 +1,22 @@
 # create
-Website to create new iso images. You can try it out here at [codersos.github.io/create](https://codersos.github.io/create/).
+Website to create new iso images. You can try it out here at [codersos.github.io/create][site].
 
 ## Development
 
 This website uses [Jekyll][jekyll] to build the page.
-You first need to [install Jekyll][install-jekyll].
+
+### Github Pages
+
+When you fork the repository, you can view the webpage under your username using [github pages][gh-pages].
+Example:
+- Github user name = "CodersOS"
+- website = "[CodersOS.github.io/create][site]"
+
+Using Github pages might be slow and changes may not be propagated properly because of the browser cache.
+However, this might be a solution for you, if installing Jekyll in the following chapter does not work.
+
+### Development on your computer
+You can [install Jekyll][install-jekyll] to see your changes.
 When the installation is done:
 
 1. Open the command line
@@ -16,7 +28,7 @@ When the installation is done:
    `jekyll serve --trace`
 4. Open http://localhost:4000
 
-## Useful things to know when developing
+### Useful things to know when developing
 
 You can always ask in an [issue][issues] if or before you get frustrated.
 This might include but is not limited to installing jekyll, coping with git, ... .
@@ -30,3 +42,5 @@ They have special meaning to jekyll.
 [install-jekyll]: http://jekyllrb.com/docs/installation/
 [jekyll]: http://jekyllrb.com/
 [issues]: https://github.com/CodersOS/create/issues
+[site]: https://codersos.github.io/create/
+[gh-pages]: http://pages.github.com/
