@@ -18,6 +18,9 @@ When the installation is done:
 
 ## Useful things to know when developing
 
+You can always ask in an [issue][issues] if or before you get frustrated.
+This might include but is not limited to installing jekyll, coping with git, ... .
+
 There are folders with `_` in the beginning.
 They will not be shown on the site.
 They have special meaning to jekyll.
@@ -26,3 +29,4 @@ They have special meaning to jekyll.
 
 [install-jekyll]: http://jekyllrb.com/docs/installation/
 [jekyll]: http://jekyllrb.com/
+[issues]: https://github.com/CodersOS/create/issues
