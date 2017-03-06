@@ -1,26 +1,40 @@
+---
+---
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/installing.css" media="screen">
-    <script type="text/javascript" async="" 
-            src="javascript/update-status.js"></script>
-    <script type="text/javascript" async="" 
-            src="javascript/software-list.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      Installing the System
-    </div>
-    <div class="progress" id="progress">
-    </div>
-    <div class="download">
-      <a id="download-link">
-        <div class="download-button" id="download-button">
-          waiting for iso file
+    <script type="text/javascript" async="" src="javascript/update-status.js"></script>
+    <script type="text/javascript" async="" src="javascript/software-list.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="javascript/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+{% include header.html %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Installing the System
+                </div>
+                <div class="panel-body" id="progress">
+                </div>
+                <div class="panel-footer">
+                    <a href="#" id="download-link">
+                        <div class="download-button" id="download-button">
+                            Waiting for the iso file. Your download link will be here.
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-      </a>
     </div>
-  </body>
+</div>
+<br>
+{% include footer.html %}
+</body>
 </html>
 
