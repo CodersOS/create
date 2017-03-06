@@ -26,7 +26,7 @@ When the installation is done:
    `cd create`
 3. Serve the website
    `jekyll serve --trace`
-4. Open http://localhost:4000
+4. Open [http://localhost:4000][jekyll-local]
 
 ### Useful things to know when developing
 
@@ -44,3 +44,4 @@ They have special meaning to jekyll.
 [issues]: https://github.com/CodersOS/create/issues
 [site]: https://codersos.github.io/create/
 [gh-pages]: http://pages.github.com/
+[jekyll-local]: http://localhost:4000
