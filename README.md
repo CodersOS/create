@@ -1,6 +1,9 @@
 # create
 Website to create new iso images. You can try it out here at [codersos.github.io/create][site].
 
+Related Work:
+- [meilix-generator](https://github.com/fossasia/meilix-generator)
+
 ## Development
 
 This website uses [Jekyll][jekyll] to build the page.
